@@ -1,0 +1,37 @@
+<%# app/views/aviator/index.html.erb %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aviator Game Stream</title>
+</head>
+<body>
+    
+    <div class="user-info">
+        <span id="usernameDisplay">Loading...</span> | 
+        <span id="balanceDisplay">Balance: --</span>
+    </div>
+
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls">
+            <div class="bet-controls">
+                <input type="number" id="betAmount" placeholder="Bet amount" min="1">
+                <input type="number" id="autoCashout" placeholder="Auto cashout (e.g. 2.5)" step="0.01" min="1">
+                <button id="placeBet">Place Bet</button>
+                <button id="cashout">Cash Out</button>
+            </div>
+            <div class="multiplier">
+                <span id="currentMultiplier">1.00x</span>
+            </div>
+        </div>
+        <div id="betting-timer-container">
+            <div id="betting-progress"></div>
+        </div>
+    </div>
+    
+    <%# Подключение JS-логики %>
+    <script type="module" src="<%= asset_path 'aviator.js' %>"></script> 
+    <%= javascript_importmap_tags 'channels/aviator_channel' %>
+</body>
+</html>

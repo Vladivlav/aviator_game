@@ -1,0 +1,7 @@
+# config/sidekiq.yml
+:concurrency: 5 # Общая конкурентность
+:queues:
+  - default
+  - mailers
+  - [streamer_critical, 1] # Эта очередь имеет вес 1. Мы можем запустить Sidekiq с
+                            # отдельным флагом, который будет слушать только ее.
