@@ -1,0 +1,1 @@
+function s(){const n=new WebSocket("ws://localhost:3000/cable");n.onopen=function(o){console.log("Socket is connected");const e={command:"subscribe",identifier:JSON.stringify({id:1,channel:"AlertsChannel"})};n.send(JSON.stringify(e))},n.onmessage=function(o){const e=JSON.parse(o.data);e.type!=="ping"&&e.message&&console.log(e.message)}}s();

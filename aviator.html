@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator Game</title>
+    <link rel="stylesheet" href="aviator.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls">
+            <div class="bet-controls">
+                <input type="number" id="betAmount" placeholder="Bet amount" min="1">
+                <button id="placeBet">Place Bet</button>
+                <button id="cashout">Cash Out</button>
+            </div>
+            <div class="multiplier">
+                <span id="currentMultiplier">1.00x</span>
+            </div>
+        </div>
+    </div>
+    <script src="aviator.js"></script>
+</body>
+</html>

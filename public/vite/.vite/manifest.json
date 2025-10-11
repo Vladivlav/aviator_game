@@ -1,0 +1,14 @@
+{
+  "entrypoints/aviator.js": {
+    "file": "assets/aviator-Bdzj6eto.js",
+    "name": "aviator",
+    "src": "entrypoints/aviator.js",
+    "isEntry": true
+  },
+  "entrypoints/home.js": {
+    "file": "assets/home-BuXgvb2U.js",
+    "name": "home",
+    "src": "entrypoints/home.js",
+    "isEntry": true
+  }
+}
